@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- UIkit CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.6/css/uikit.min.css"
+    />
+    <style>
+      button,
+      input {
+        border-radius: 5px;
+      }
+    </style>
+    <title>register</title>
+  </head>
+  <body>
+    <div class="uk-container uk-padding">
+      <header>
+        <a href="#">
+          <p class="uk-text-right">ログイン</p>
+        </a>
+      </header>
+      <div class="uk-container-center">
+        <h2>ユーザー登録</h2>
+        <button
+          class="uk-button-default uk-button-large uk-width-1-1 uk-margin-xlarge-bottom"
+        >
+          <a href="#">SNS認証</a>
+        </button>
+        <form>
+          <fieldset class="uk-fieldset">
+            <input
+              type="text"
+              placeholder="お名前"
+              id="name"
+              class="uk-input uk-margin-small-bottom"
+              inputmode="text"
+            />
+            <input
+              type="number"
+              placeholder="電話番号"
+              id="tel"
+              class="uk-input uk-margin-small-bottom"
+              inputmode="numeric"
+            />
+            <input
+              type="email"
+              placeholder="メールアドレス"
+              id="email"
+              class="uk-input uk-margin-small-bottom"
+              inputmode="email"
+            />
+            <input
+              type="number"
+              placeholder="家族構成（ご家族の人数）"
+              id="family"
+              class="uk-input uk-margin-small-bottom"
+            />
+            <input
+              type="password"
+              placeholder="password"
+              id="name"
+              class="uk-input uk-margin-small-bottom"
+              inputmode=""
+            />
+            <input
+              type="password"
+              placeholder="password"
+              id="name"
+              class="uk-input uk-margin-small-bottom"
+            />
+            <button
+              class="uk-button-secondary uk-button-large uk-width-1-1 uk-margin-small-bottom"
+            >
+              登録
+            </button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.6/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.6/js/uikit-icons.min.js"></script>
+  </body>
+</html>
