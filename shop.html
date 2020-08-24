@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- UIkit CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.6/css/uikit.min.css"
+    />
+    <style>
+      button,
+      input {
+        border-radius: 5px;
+      }
+
+      header {
+        background-color: #fff;
+        padding: 5px;
+      }
+
+      header p {
+        margin: 0px;
+      }
+
+      footer {
+        background-color: #fff;
+        border-top: 0.5px solid #aaa;
+      }
+
+      #foods_container {
+        margin-bottom: 80px;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+      }
+
+      .line_height {
+        line-height: 36px;
+      }
+      .food {
+        margin: 5px;
+        height: 250px;
+        box-sizing: border-box;
+      }
+      .food_image {
+        height: 180px;
+        width: 100%;
+        object-fit: cover;
+        /* box-sizing: border-box; */
+      }
+      .food_detail {
+        padding: 8px;
+        /* box-sizing: border-box; */
+      }
+      .map {
+        height: 0;
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        /* 56.25%でアスペクト比16:9 */
+        position: relative;
+      }
+      .map iframe {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+    <title>shop</title>
+  </head>
+  <body>
+    <header class="uk-flex uk-box-shadow-small" uk-sticky="top:0">
+      <div class="uk-text-large uk-width-expanda">
+        ほにゃらら
+      </div>
+      <div class="uk-text-small uk-width-small uk-text-right line_height">
+        徒歩10分
+      </div>
+    </header>
+    <div id="shop_detail">
+      <button type="button" class="uk-button uk-button-primary uk-width-1-1">
+        <span class="uk-text-bold">詳細情報</span>
+      </button>
+      <div uk-dropdown="mode:click" class="dropdown">
+        <h5 class="uk-margin-small uk-text-primary">推しpoint</h5>
+        <div class="text uk-text-small">
+          ほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃらら
+        </div>
+        <h5 class="uk-margin-small uk-text-primary">定休日/営業時間</h5>
+        <div class="times">
+          日・祝日<br>
+          OPEN:10時<br>
+          CLOSE:20時
+        </div>
+        <h5 class="uk-margin-small uk-text-primary">所在地</h5>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7223.979640290737!2d130.38910372275697!3d33.586913873457746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354191aa0929fbdf%3A0xd5e535b27b5236c6!2z44K444O844K644Ki44Kr44OH44Of44O856aP5bKh77yP6LW35qWt5a6244O744Ko44Oz44K444OL44Ki6aSK5oiQ5a2m5qCh77yI44OX44Ot44Kw44Op44Of44Oz44Kw77yJ!5e0!3m2!1sja!2sjp!4v1598269098959!5m2!1sja!2sjp"
+            width="400"
+            height="300"
+            frameborder="0"
+            style="border: 0;"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+          ></iframe>
+        </div>
+      </div>
+      <div uk-dropdown="mode:click"></div>
+    </div>
+    <div id="foods_container">
+      <div class="food uk-card uk-box-shadow-small uk-border-rounded">
+        <a href="food.html">
+          <img src="image/no_image.png" alt="" class="food_image" />
+        </a>
+        <div class="uk-card-body food_detail">
+          <p>
+            <span class="uk-text-bold uk-text-emphasis">百光手羽唐</span><br />
+            <span>76円(税込@1本) </span>
+          </p>
+        </div>
+      </div>
+      <div class="food uk-card uk-box-shadow-small uk-border-rounded">
+        <a href="food.html">
+          <img src="image/no_image.png" alt="" class="food_image" />
+        </a>
+        <div class="uk-card-body food_detail">
+          <p>
+            <span class="uk-text-bold uk-text-emphasis">百光手羽唐</span><br />
+            <span>76円(税込@1本) </span>
+          </p>
+        </div>
+      </div>
+      <div class="food uk-card uk-box-shadow-small uk-border-rounded">
+        <a href="food.html">
+          <img src="image/no_image.png" alt="" class="food_image" />
+        </a>
+        <div class="uk-card-body food_detail">
+          <p>
+            <span class="uk-text-bold uk-text-emphasis">百光手羽唐</span><br />
+            <span>76円(税込@1本) </span>
+          </p>
+        </div>
+      </div>
+      <div class="food uk-card uk-box-shadow-small uk-border-rounded">
+        <a href="food.html">
+          <img src="image/no_image.png" alt="" class="food_image" />
+        </a>
+        <div class="uk-card-body food_detail">
+          <p>
+            <span class="uk-text-bold uk-text-emphasis">百光手羽唐</span><br />
+            <span>76円(税込@1本) </span>
+          </p>
+        </div>
+      </div>
+      <div class="food uk-card uk-box-shadow-small uk-border-rounded">
+        <a href="food.html">
+          <img src="image/no_image.png" alt="" class="food_image" />
+        </a>
+        <div class="uk-card-body food_detail">
+          <p>
+            <span class="uk-text-bold uk-text-emphasis">百光手羽唐</span><br />
+            <span>76円(税込@1本) </span>
+          </p>
+        </div>
+      </div>
+      <div class="food uk-card uk-box-shadow-small uk-border-rounded">
+        <a href="food.html">
+          <img src="image/no_image.png" alt="" class="food_image" />
+        </a>
+        <div class="uk-card-body food_detail">
+          <p>
+            <span class="uk-text-bold uk-text-emphasis">百光手羽唐</span><br />
+            <span>76円(税込@1本) </span>
+          </p>
+        </div>
+      </div>
+      <div class="food uk-card uk-box-shadow-small uk-border-rounded">
+        <a href="food.html">
+          <img src="image/no_image.png" alt="" class="food_image" />
+        </a>
+        <div class="uk-card-body food_detail">
+          <p>
+            <span class="uk-text-bold uk-text-emphasis">百光手羽唐</span><br />
+            <span>76円(税込@1本) </span>
+          </p>
+        </div>
+      </div>
+      <div class="food uk-card uk-box-shadow-small uk-border-rounded">
+        <a href="food.html">
+          <img src="image/no_image.png" alt="" class="food_image" />
+        </a>
+        <div class="uk-card-body food_detail">
+          <p>
+            <span class="uk-text-bold uk-text-emphasis">百光手羽唐</span><br />
+            <span>76円(税込@1本) </span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer
+      class="uk-position-bottom uk-position-fixed uk-padding-small uk-padding-remove-horizontal"
+    >
+      <!-- uk-padding-remove-horizontal->左右のpadding削除 -->
+      <div class="uk-flex uk-flex-around">
+        <a href="#"><img src="image/search.png" alt="search" /></a>
+        <a href="#"><img src="image/histry.png" alt="histry" /></a>
+        <a href="#"><img src="image/heart-regular.png" alt="heart" /></a>
+        <a href="#"><img src="image/cart.png" alt="cart" /></a>
+        <a href="#"><img src="image/profile.png" alt="profile" /></a>
+      </div>
+    </footer>
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.6/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.6/js/uikit-icons.min.js"></script>
+  </body>
+</html>

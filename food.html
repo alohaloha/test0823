@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- UIkit CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.6/css/uikit.min.css"
+    />
+    <style>
+      button,
+      input {
+        border-radius: 5px;
+      }
+
+      .food_image {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
+
+      header {
+        background-color: #fff;
+        padding: 5px;
+      }
+      .line_height {
+        line-height: 36px;
+      }
+
+      header p {
+        margin: 0px;
+      }
+
+      footer {
+        background-color: #fff;
+        border-top: 0.5px solid #aaa;
+      }
+
+      #main_container {
+        margin-bottom: 80px;
+      }
+      .price {
+        font-size: 1.2rem;
+      }
+    </style>
+    <title>メイン</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="uk-flex uk-box-shadow-small" uk-sticky="top:0">
+        <div class="uk-text-large uk-width-expanda">
+          <a href="shop.html" class="uk-link-reset">ほにゃらら</a>
+        </div>
+        <div class="uk-text-small uk-width-small uk-text-right line_height">
+          徒歩10分
+        </div>
+      </header>
+      <div id="main_container">
+        <div class="uk-card uk-margin-bottom">
+          <div class="uk-card-media-top uk-padding-left uk-padding-right">
+            <a href="shop.html">
+              <img
+                src="image/no_image.png"
+                alt="food_name"
+                class="food_image uk-padding-left"
+              />
+            </a>
+            <img
+              src="image/heart-regular.png"
+              alt="like"
+              class="uk-overlay uk-position-center-right uk-padding-small"
+            />
+          </div>
+          <div class="uk-card-footer uk-padding-small">
+            <div class="text_wrapper">
+              <span class="uk-text-warning">最短受取可能日時　10月27日15:00頃</span><br>
+              <span class="uk-text-bold uk-text-large">ホニャララ</span><br />
+              <span class="uk-float-right price">76円</span>
+            </div>
+            <div class="detail">
+              <button
+                type="button"
+                class="uk-button uk-button-primary uk-width-1-1"
+              >
+                <span class="uk-text-bold">詳細情報</span>
+              </button>
+              <div uk-dropdown="mode:click" class="dropdown">
+                <h5 class="uk-margin-small uk-text-primary">推しpoint</h5>
+                <div class="text uk-text-small">
+                  ほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃらら
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer
+        class="uk-position-bottom uk-position-fixed uk-padding-small uk-padding-remove-horizontal"
+      >
+        <!-- uk-padding-remove-horizontal->左右のpadding削除 -->
+        <div class="uk-flex uk-flex-around">
+          <a href="#"><img src="image/search.png" alt="search" /></a>
+          <a href="#"><img src="image/histry.png" alt="histry" /></a>
+          <a href="#"><img src="image/heart-regular.png" alt="heart" /></a>
+          <a href="#"><img src="image/cart.png" alt="cart" /></a>
+          <a href="#"><img src="image/profile.png" alt="profile" /></a>
+        </div>
+      </footer>
+    </div>
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.6/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.6/js/uikit-icons.min.js"></script>
+  </body>
+</html>
