@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- UIkit CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.6/css/uikit.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <style>
+      .minus,
+      .plus {
+        border-radius: 5px;
+        width: 50px;
+      }
+
+      .shop_image {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
+
+      header {
+        background-color: #fff;
+        padding: 5px;
+      }
+
+      header p {
+        margin: 0px;
+      }
+
+      .line_height {
+        line-height: 36px;
+      }
+
+      footer {
+        background-color: #fff;
+        border-top: 0.5px solid #aaa;
+      }
+
+      #main_container {
+        margin-bottom: 80px;
+      }
+
+      .uk-table td {
+        padding: 5px;
+      }
+
+      .uk-align-right {
+        margin: 0;
+      }
+      td .count {
+        width: 50px;
+      }
+      .border_none {
+        border: none;
+        width: 50px;
+        text-align: center;
+      }
+    </style>
+    <title>カート〜１</title>
+  </head>
+
+  <body>
+    <!-- .container一番外枠はじまり -->
+    <div class="container">
+      <header class="uk-flex uk-box-shadow-small" uk-sticky="top:0">
+        <div class="uk-text-large uk-width-expanda">
+          <a href="shop.html" class="uk-link-reset">ほにゃらら</a>
+        </div>
+        <div class="uk-text-small uk-width-small uk-text-right line_height">
+          徒歩10分
+        </div>
+      </header>
+      <!-- #main_containerはじまり -->
+      <div id="main_container">
+        <!-----------------------
+          注文確認
+      ------------------------->
+        <div class="uk-container uk-padding-small">
+          <!-- 注文内容 -->
+          <div class="order_wrapper">
+            <div class="table_wrapper uk-overflow-auto">
+              <table class="uk-table">
+                <thead class="uk-text-w">
+                  <tr>
+                    <th class="uk-width-2-5 uk-text-primary">
+                      <span>商品名</span>
+                    </th>
+                    <th class="uk-width-2-5 uk-text-primary">
+                      <span>種　類</span>
+                    </th>
+                    <th class="uk-width-1-5 uk-text-primary">
+                      <span>個　数</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>ホニャララ</td>
+                    <td class="uk-text-center">塩味</td>
+                    <td class="uk-text-right">10</td>
+                  </tr>
+                  <tr>
+                    <td>ホニャララ</td>
+                    <td class="uk-text-center">タレ味</td>
+                    <td class="uk-text-right">10</td>
+                  </tr>
+                  <tr>
+                    <td>ナントカカントカ</td>
+                    <td class="uk-text-center">調理済み</td>
+                    <td class="uk-text-right">10</td>
+                  </tr>
+                  <tr>
+                    <td>ナントカカントカ</td>
+                    <td class="uk-text-center">冷凍</td>
+                    <td class="uk-text-right">10</td>
+                  </tr>
+                  <tr>
+                    <td>チンプンカンプン</td>
+                    <td class="uk-text-center">大</td>
+                    <td class="uk-text-right">1</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- .table_wrapperおわり -->
+          </div>
+          <!-- .order_wrapper注文内容おわり -->
+          <hr />
+          <!-------------------------
+        追加フォームはじまり
+        --------------------------->
+          <form>
+            <fieldset class="uk-fieldset">
+              <!-----------------------
+              有料オプション追加
+              ------------------------->
+              <div class="option_wrapper">
+                <table class="uk-table">
+                  <tbody>
+                    <tr>
+                      <td
+                        class="uk-text-middle uk-width-expanda uk-text-center"
+                      >
+                        レジ袋(3円)
+                      </td>
+                      <td>
+                        <button class="uk-button-default uk-text-large minus">
+                          -
+                        </button>
+                      </td>
+                      <td
+                        class="uk-text-middle uk-text-large uk-text-center count"
+                      >
+                        <input
+                          type="number"
+                          value="1"
+                          class="border_none uk-text-large"
+                        />
+                      </td>
+                      <td>
+                        <button class="uk-button-default uk-text-large plus">
+                          +
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="uk-text-middle uk-width-expanda uk-text-center"
+                      >
+                        レジ袋(5円)
+                      </td>
+                      <td>
+                        <button class="uk-button-default uk-text-large minus">
+                          -
+                        </button>
+                      </td>
+                      <td
+                        class="uk-text-middle uk-text-large uk-text-center count"
+                      >
+                        <input
+                          type="number"
+                          value="1"
+                          class="border_none uk-text-large"
+                        />
+                      </td>
+                      <td>
+                        <button class="uk-button-default uk-text-large plus">
+                          +
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- .option_wrapper有料オプションおわり -->
+              <!-----------------------
+                その他要望追加
+              ------------------------->
+              <div class="request_wrapper">
+                <textarea
+                  class="uk-textarea"
+                  rows="3"
+                  placeholder="その他ご要望はこちらにご記入ください。"
+                ></textarea>
+                <span class="uk-text-small uk-text-danger">
+                  *いただいたご要望にお応えできない場合もありますので、ご了承ください。
+                </span>
+              </div>
+              <!-- .wrapper無料オプションおわり -->
+
+              <!-------------------
+                合計金額
+              --------------------->
+              <div class="total">
+                <p class="uk-text-large uk-text-bold uk-text-right">
+                  合計：3,529円
+                </p>
+              </div>
+              <!-------------------
+            受取日時確認
+        --------------------->
+              <div class="day uk-margin-bottom">
+                <span class="uk-label">
+                  受取予約時間
+                </span>
+                <span class="uk-text-bold">
+                  2020年10月28日(水)15時30分
+                </span>
+              </div>
+              <!--------------------- 
+                戻るボタン
+              ---------------------->
+              <div class="return_button">
+                <a
+                  href="cart.html"
+                  class="uk-text-center uk-align-middle uk-link"
+                >
+                  戻る(予約内容を変更する)
+                </a>
+              </div>
+              <!---------------------
+                確定ボタン
+              ----------------------->
+              <div class="decision_button">
+                <button
+                  class="uk-button-secondary uk-button-large uk-width-1-1 uk-margin-small-bottom uk-border-rounded"
+                >
+                  <a href="order_record.html" class="uk-link-reset">
+                    注文・予約を確定する
+                  </a>
+                </button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <!--.uk-container 注文確認終わり-->
+      </div>
+      <!-- #main_containerおわり -->
+
+      <!-----------------------
+      フッター
+      ------------------------->
+      <footer
+        class="uk-position-bottom uk-position-fixed uk-padding-small uk-padding-remove-horizontal"
+      >
+        <!-- uk-padding-remove-horizontal->左右のpadding削除 -->
+        <div class="uk-flex uk-flex-around">
+          <a href="#"><img src="image/search.png" alt="search" /></a>
+          <a href="#"><img src="image/histry.png" alt="histry" /></a>
+          <a href="#"><img src="image/heart-regular.png" alt="heart" /></a>
+          <a href="#"><img src="image/cart.png" alt="cart" /></a>
+          <a href="#"><img src="image/profile.png" alt="profile" /></a>
+        </div>
+      </footer>
+    </div>
+    <!-- .container一番外枠おわり -->
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.6/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.6/js/uikit-icons.min.js"></script>
+    <script></script>
+  </body>
+</html>

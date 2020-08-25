@@ -9,9 +9,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.6/css/uikit.min.css"
     />
     <style>
-      button,
-      input {
+      .minus,
+      .plus {
         border-radius: 5px;
+        width: 50px;
       }
 
       .food_image {
@@ -24,12 +25,12 @@
         background-color: #fff;
         padding: 5px;
       }
-      .line_height {
-        line-height: 36px;
-      }
 
       header p {
         margin: 0px;
+      }
+      .line_height {
+        line-height: 36px;
       }
 
       footer {
@@ -43,8 +44,14 @@
       .price {
         font-size: 1.2rem;
       }
+      td .count {
+        width: 50px;
+      }
+      caption {
+        padding: 5px 10%;
+      }
     </style>
-    <title>メイン</title>
+    <title>商品ページ</title>
   </head>
 
   <body>
@@ -58,7 +65,10 @@
         </div>
       </header>
       <div id="main_container">
-        <div class="uk-card uk-margin-bottom">
+        <div class="uk-card">
+          <!-----------------------
+          商品画像
+          ------------------------->
           <div class="uk-card-media-top uk-padding-left uk-padding-right">
             <a href="shop.html">
               <img
@@ -70,32 +80,128 @@
             <img
               src="image/heart-regular.png"
               alt="like"
-              class="uk-overlay uk-position-center-right uk-padding-small"
+              class="uk-overlay uk-position-top-right uk-padding-small"
             />
           </div>
+          <!-----------------------
+          商品情報
+          ------------------------->
           <div class="uk-card-footer uk-padding-small">
             <div class="text_wrapper">
-              <span class="uk-text-warning">最短受取可能日時　10月27日15:00頃</span><br>
+              <span class="uk-text-warning"
+                >最短受取可能日時　10月27日15:00頃</span
+              ><br />
               <span class="uk-text-bold uk-text-large">ホニャララ</span><br />
-              <span class="uk-float-right price">76円</span>
-            </div>
-            <div class="detail">
-              <button
-                type="button"
-                class="uk-button uk-button-primary uk-width-1-1"
-              >
-                <span class="uk-text-bold">詳細情報</span>
-              </button>
-              <div uk-dropdown="mode:click" class="dropdown">
-                <h5 class="uk-margin-small uk-text-primary">推しpoint</h5>
-                <div class="text uk-text-small">
-                  ほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃらら
-                </div>
-              </div>
+              <span class="uk-float-right price">76円(税込)</span>
             </div>
           </div>
         </div>
+        <!-----------------------
+          詳細情報
+          ------------------------->
+        <div class="detail">
+          <button
+            type="button"
+            class="uk-button uk-button-primary uk-width-1-1"
+          >
+            <span class="uk-text-bold">商品詳細情報▼<span>
+          </button>
+          <div uk-dropdown="mode:click" class="dropdown uk-padding-small">
+            <h5 class="uk-margin-small uk-text-primary">推しpoint</h5>
+            <div class="text uk-text-small">
+              <table class="uk-table uk-padding-small">
+                <!-- <thead>
+                  <tr>
+                    <th>種類</th>
+                    <th>説明</th>
+                  </tr>
+                </thead> -->
+                <tbody>
+                  <tr>
+                    <td class="uk-width-1-4">塩味</td>
+                    <td class="uk-width-expanda">
+                      めちゃうま一番人気めちゃうま一番人気めちゃうま一番人気めちゃうま一番人気めちゃうま一番人気
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>タレ味</td>
+                    <td>
+                      めちゃうまご飯が進むめちゃうまご飯が進むめちゃうまご飯が進むめちゃうまご飯が進む
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!--------------------- 
+          注文数を入力するところ
+          ---------------------->
+        <div class="uk-container">
+          <div class="order_count">
+            <table class="uk-table">
+              <!-- <caption>
+                種類
+              </caption> -->
+              <!---------->
+              <tbody>
+                <tr>
+                  <td class="uk-text-middle uk-width-expanda uk-text-center">
+                    塩味
+                  </td>
+                  <td>
+                    <button class="uk-button-default uk-text-large minus">
+                      -
+                    </button>
+                  </td>
+                  <td class="uk-text-middle uk-text-large uk-text-center count">
+                    1
+                  </td>
+                  <td>
+                    <button class="uk-button-default uk-text-large plus">
+                      +
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="uk-text-middle uk-width-expanda uk-text-center">
+                    タレ味
+                  </td>
+                  <td>
+                    <button class="uk-button-default uk-text-large minus">
+                      -
+                    </button>
+                  </td>
+                  <td class="uk-text-middle uk-text-large uk-text-center count">
+                    1
+                  </td>
+                  <td>
+                    <button class="uk-button-default uk-text-large plus">
+                      +
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <button
+              class="uk-button-secondary uk-button-large uk-width-1-1 uk-margin-small-bottom uk-border-rounded"
+            >
+              <a href="shop.html" class="uk-link-reset">カートに入れる</a>
+            </button>
+          </div>
+          <div class="attention">
+            <a href="#" class="uk-display-block uk-text-center uk-margin-bottom">
+                営業時間について
+            </a>
+            <a href="#" class="uk-display-block uk-text-center uk-margin-bottom">
+                お支払いについて
+            </a>
+          </div>
+        </div>
       </div>
+      <!-----------------------
+      フッター
+      ------------------------->
       <footer
         class="uk-position-bottom uk-position-fixed uk-padding-small uk-padding-remove-horizontal"
       >
@@ -104,7 +210,7 @@
           <a href="#"><img src="image/search.png" alt="search" /></a>
           <a href="#"><img src="image/histry.png" alt="histry" /></a>
           <a href="#"><img src="image/heart-regular.png" alt="heart" /></a>
-          <a href="#"><img src="image/cart.png" alt="cart" /></a>
+          <a href="cart.html"><img src="image/cart.png" alt="cart" /></a>
           <a href="#"><img src="image/profile.png" alt="profile" /></a>
         </div>
       </footer>
@@ -112,5 +218,10 @@
     <!-- UIkit JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.6/js/uikit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.6/js/uikit-icons.min.js"></script>
+    <script>
+      // ハートをタップでお気に入り登録!=お気に入り解除
+      // −タップで数量1減（ただし０未満は不可）+タップで数量1増（在庫数を上限とする）
+      // 商品詳細情報は50文字以内が望ましい※見た目的に
+    </script>
   </body>
 </html>
