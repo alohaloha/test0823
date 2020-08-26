@@ -36,9 +36,10 @@
           <p>見つからない設定があったら、ユーティリティを見てみるべし</p>
         </li>
         <li class="uk-card-default uk-list uk-padding">
+          <span class="uk-badge uk-padding-small">要調査</span>
           <p class="uk-card-title">0824:flex-box</p>
           <p>
-            shop.htmlで、商品一覧を2列×○行にしたいのにできない。。。<br />
+            shop.htmlで、UIKitで商品一覧を2列×○行にしたいのにできない。。。<br />
             widthの指定を親からしても、本人からしても効かずに1行になってしまう。
           </p>
         </li>
@@ -50,6 +51,7 @@
           <p>書いたまま。ハマってはないけど、今後役に立つだろう。</p>
         </li>
         <li class="uk-card-default uk-list uk-padding">
+          <span class="uk-badge uk-padding-small">要調査</span>
           <p class="uk-card-title">0824:アレルギー表示って必要なのか…？</p>
           <p>
             ふとした疑問。アレルギー物質の表示は必要だろうか。<br />
@@ -100,36 +102,60 @@
           <a href="https://qiita.com/amotarao/items/fa5bf782704d27f72b13">
             vuejs-datepicker
           </a>
-          <a href="https://www.kabanoki.net/2560/">
-            vuejs-datepickerの色々
-          </a>
+          <a href="https://www.kabanoki.net/2560/"> vuejs-datepickerの色々 </a>
           <a href="https://www.kabanoki.net/2880/">
             Wickedpicker(Timepicker系ライブラリ)について
           </a>
         </li>
         <li class="uk-card-default uk-list uk-padding">
-          <p class="uk-card-title">0824:</p>
-          <p></p>
+          <p class="uk-card-title">0826:QRコードの自動生成について</p>
+          <p>
+            自動生成された注文番号からQRコードを生成する方法を考えたら、ライブラリあった。<br />
+            調べてるうちに、注文番号だけのQRコードだと偽造が簡単だから、頭に何かつけるとかデザイン変えるとか、手立てが必要か？そもそも、そのお店独自の注文番号じゃないから、大丈夫か。
+          </p>
+          <a href="https://qiita.com/de_teiu_tkg/items/ac9e6da77975b16169b9">
+            Vue.jsでQRコード生成
+          </a>
+          <a href="https://whatsupguys.net/?p=2296">
+            Nuxt.jsでQRコード生成を実装（ちょっと違うかも）
+          </a>
         </li>
         <li class="uk-card-default uk-list uk-padding">
-          <p class="uk-card-title">0824:</p>
-          <p></p>
+          <p class="uk-card-title">0826:Form入力欄に関する色々</p>
+          <p>inputmodeは古い書き方で、今はtype=""で対応可能らしい。</p>
+          <p>
+            間違って再読み込みしてフォーム消える問題の解決もjsでできる。このページを離れますか？ってやつ。
+          </p>
+          <a href="https://ics.media/entry/11221/"
+            >今時の入力フォームの書き方</a
+          >
         </li>
         <li class="uk-card-default uk-list uk-padding">
-          <p class="uk-card-title">0824:</p>
-          <p></p>
+          <span class="uk-badge uk-padding-small">要調査</span>
+          <p class="uk-card-title">0826:order_recordに遷移した時</p>
+          <p>
+            「正常に予約を受け付けました」のメッセージをポップアップで出した方がいいかもしれない。ヒントはPICKSから。問合せを送った時がそうだった。
+          </p>
+          <p>実装はモーダル+setTimeoutか、ダイアログか。要検討</p>
         </li>
         <li class="uk-card-default uk-list uk-padding">
-          <p class="uk-card-title">0824:</p>
-          <p></p>
+          <p class="uk-card-title">0826:クレジットカード情報入力画面</p>
+          <p>PICKSは新規タブみたいな挙動。戻るではなく「×」で閉じる。</p>
         </li>
         <li class="uk-card-default uk-list uk-padding">
-          <p class="uk-card-title">0824:</p>
-          <p></p>
+          <p class="uk-card-title">0826:profile画像が中心にできなかった</p>
+          <p>
+            いろいろ試行錯誤してもできなくて後回しにしてたやつ。参考サイトやっと見つけた。
+          </p>
+          <a
+            href="https://design-levelup.com/webdesign/html-css/how-to-object-fit"
+            >img要素を親要素いっぱいに表示する方法色々</a
+          >
         </li>
         <li class="uk-card-default uk-list uk-padding">
-          <p class="uk-card-title">0824:</p>
-          <p></p>
+          <span class="uk-badge uk-padding-small">要調査</span>
+          <p class="uk-card-title">0826:コンポーネントの構成・構造</p>
+          <p>コンポーネントの中にコンポーネントが入れられるのか？同じような情報だけど、ユーザビリティを考えると、ちょこっと配置変えた方がいいとことかある。こまつた。</p>
         </li>
         <li class="uk-card-default uk-list uk-padding">
           <p class="uk-card-title">0824:</p>

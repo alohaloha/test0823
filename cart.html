@@ -92,7 +92,7 @@
             />
           </div>
         </div>
-        <!-- .uk-card（店舗情報おわり） -->
+        <!-- .uk-card（店舗画像おわり） -->
           <!-----------------------
           注文確認
           ------------------------->
@@ -106,6 +106,7 @@
                   ホニャララ
                   <span class="uk-align-right">
                     <button class="uk-button-default uk-text-primary uk-border-rounded">
+                      <!-- ペンのアイコン -->
                       <i class="fas fa-pencil-alt uk-text-large"></i>
                     </button>
                   </span>
@@ -115,17 +116,21 @@
               <div class="table_wrapper">
                 <table class="uk-table">
                   <tr>
-                    <td class="uk-width-1-2">塩味</td>
-                    <td>10</td>
+                    <td class="uk-width-3-5">塩味</td>
+                    <td class="uk-width-1-5">10</td>
                     <td>
-                      <button class="uk-button-danger uk-border-circle">×</button>
+                      <button class="uk-button-danger uk-border-circle">
+                        <i class="fas fa-times"></i>
+                      </button>
                     </td>
                   </tr>
                   <tr>
-                    <td class="uk-width-1-2">タレ味</td>
-                    <td>10</td>
+                    <td class="uk-width-3-5">タレ味</td>
+                    <td class="uk-width-1-5">10</td>
                     <td>
-                      <button class="uk-button-danger uk-border-circle">×</button>
+                      <button class="uk-button-danger uk-border-circle">
+                        <i class="fas fa-times"></i>
+                      </button>
                     </td>
                   </tr>
                   <tr>
@@ -153,17 +158,21 @@
               <div class="table_wrapper">
                 <table class="uk-table">
                   <tr>
-                    <td class="uk-width-1-2">調理済み</td>
-                    <td>10</td>
+                    <td class="uk-width-3-5">調理済み</td>
+                    <td class="uk-width-1-5">10</td>
                     <td>
-                      <button class="uk-button-danger uk-border-circle">×</button>
+                      <button class="uk-button-danger uk-border-circle">
+                        <i class="fas fa-times"></i>
+                      </button>
                     </td>
                   </tr>
                   <tr>
-                    <td class="uk-width-1-2">冷凍</td>
-                    <td>10</td>
+                    <td class="uk-width-3-5">冷凍</td>
+                    <td class="uk-width-1-5">10</td>
                     <td>
-                      <button class="uk-button-danger uk-border-circle">×</button>
+                      <button class="uk-button-danger uk-border-circle">
+                        <i class="fas fa-times"></i>
+                      </button>
                     </td>
                   </tr>
                   <tr>
@@ -191,10 +200,12 @@
               <div class="table_wrapper">
                 <table class="uk-table">
                   <tr>
-                    <td class="uk-width-1-2">大</td>
-                    <td>1</td>
+                    <td class="uk-width-3-5">大</td>
+                    <td class="uk-width-1-5">1</td>
                     <td>
-                      <button class="uk-button-danger uk-border-circle">×</button>
+                      <button class="uk-button-danger uk-border-circle">
+                        <i class="fas fa-times"></i>
+                      </button>
                     </td>
                   </tr>
                   <tr>
@@ -227,7 +238,7 @@
               <input type="datetime-local" id="day" class="uk-input uk-margin-bottom">
               <button class="uk-button-secondary uk-button-large uk-width-1-1 uk-margin-small-bottom uk-border-rounded">
               <a href="order_confirm.html" class="uk-link-reset">
-                お支払い方法登録へ
+                お支払い方法登録へ/注文内容を確認する
               </a>
             </button>
             </form>
@@ -250,13 +261,24 @@
       >
         <!-- uk-padding-remove-horizontal->左右のpadding削除 -->
         <div class="uk-flex uk-flex-around">
-          <a href="#"><img src="image/search.png" alt="search" /></a>
-          <a href="#"><img src="image/histry.png" alt="histry" /></a>
-          <a href="#"><img src="image/heart-regular.png" alt="heart" /></a>
-          <a href="#"><img src="image/cart.png" alt="cart" /></a>
-          <a href="#"><img src="image/profile.png" alt="profile" /></a>
+          <a href="main.html">
+            <img src="image/search.png" alt="search" />
+          </a>
+          <a href="order_histry.html">
+            <img src="image/histry.png" alt="histry" />
+          </a>
+          <a href="like.html">
+            <img src="image/heart-regular.png" alt="heart" />
+          </a>
+          <a href="cart.html">
+            <img src="image/cart.png" alt="cart" />
+          </a>
+          <a href="profile.html">
+            <img src="image/profile.png" alt="profile" />
+          </a>
         </div>
       </footer>
+
     </div>
     <!-- UIkit JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.6/js/uikit.min.js"></script>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.6/css/uikit.min.css" />
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
+
+  <style>
+    button,
+    input {
+      border-radius: 5px;
+    }
+    .image_path {
+      display: block;
+      width: 120px;
+      height: 120px;
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      /* text-align: center;
+      line-height: 120px; */
+      margin: 15px auto;
+      overflow: hidden;
+      position: relative;
+    }
+    .image_src {
+      /* object-fit: cover; */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      min-width: 100%;
+      min-height: 100%;
+    }
+  </style>
+  <title>register</title>
+</head>
+
+<body>
+  <!-- 一番外枠 -->
+  <div class="uk-container uk-padding">
+    <header>
+      <a href="main.html">
+        <p class="uk-text-right">キャンセル</p>
+      </a>
+    </header>
+    <!-- #main_containerはじまり -->
+    <div id="main_container">
+      <h2 class="uk-text-center">プロフィール</h2>
+      <form>
+        <fieldset class="uk-fieldset">
+          <label for="image_path" class="image_path">
+              <img src="image/user-solid.png" alt="" class="image_src">
+              <input type="file" name="" id="image_path" class="uk-hidden">
+            </label>
+          <input type="text" required placeholder="お名前" id="name" class="uk-input uk-margin-small-bottom uk-border-rounded" />
+          <input type="number" required placeholder="電話番号" id="tel" class="uk-input uk-margin-small-bottom uk-border-rounded"
+            inputmode="numeric" />
+          <input type="email" required placeholder="メールアドレス" id="email" class="uk-input uk-margin-small-bottom uk-border-rounded"
+            inputmode="email" />
+          <input type="number" placeholder="家族構成（ご家族の人数）" id="family"
+            class="uk-input uk-margin-small-bottom uk-border-rounded" />
+          <button class="uk-button-default uk-button-large uk-width-1-1 uk-margin-small-bottom uk-border-rounded">
+            <a href="pay.html">お支払い方法登録</a>
+          </button>
+          <button class="uk-button-secondary uk-button-large uk-width-1-1 uk-margin-small-bottom uk-border-rounded">
+            保存
+          </button>
+        </fieldset>
+      </form>
+    </div>
+    <!-- #main_containerおわり -->
+  </div>
+  <!-- 一番外枠おわり -->
+  <!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.6/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.6/js/uikit-icons.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- UIkit CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.6/css/uikit.min.css"
+    />
+    <style>
+      button,
+      input {
+        border-radius: 5px;
+      }
+      .shop_image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      header {
+        background-color: #fff;
+        padding: 5px;
+      }
+      header p {
+        margin: 0px;
+      }
+      footer {
+        background-color: #fff;
+        border-top: 0.5px solid #aaa;
+      }
+      #main_container {
+        margin-bottom: 100px;
+      }
+      #like_food_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      #like_food_container .uk-card {
+        width: 98%;
+      }
+      #like_food_container .uk-card-body {
+        padding: 5px 15px;
+      }
+      #like_shop_container {
+        padding: 5px;
+      }
+    </style>
+    <title>お気に入り</title>
+  </head>
+
+  <body>
+    <!-- .container一番外枠はじまり -->
+    <div class="container">
+      <!-- ヘッダーはじまり -->
+      <header class="uk-text-center uk-box-shadow-small" uk-sticky="top:0">
+        <ul class="uk-child-width-1-2" uk-tab>
+          <li class="active" id="shop">
+            <a href="#like_shop_container">お店</a>
+          </li>
+          <li id="food">
+            <a href="#like_food_container">商品</a>
+          </li>
+        </ul>
+      </header>
+      <!-- ヘッダーおわり -->
+      <!-- #main_containerはじまり -->
+      <div id="main_container">
+        <!---------------------
+        お気に入り店舗はじまり
+        ------------------------>
+        <div id="like_shop_container">
+          <!-- .uk-card一店舗情報はじまり -->
+          <div class="uk-card uk-margin-bottom">
+            <div class="uk-card-media-top uk-padding-left uk-padding-right">
+              <a href="shop.html">
+                <img
+                  src="image/no_image.png"
+                  alt="shop_name"
+                  class="shop_image uk-padding-left"
+                />
+              </a>
+              <img
+                src="image/heart-solid.png"
+                alt="like"
+                class="uk-overlay uk-position-top-right uk-padding-small"
+              />
+            </div>
+            <div class="uk-card-footer uk-padding-small">
+              店名：ほにゃらら<br />
+              人気商品：ホニャララ<br />
+              <div class="uk-child-width-1-2-@s uk-flex uk-flex-between">
+                <span class="uk-text-small uk-text-primary"
+                  >カテゴリ：honyarara</span
+                >
+                <span class="uk-text-small uk-text-right uk-text-primary"
+                  >徒歩1分</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- .uk-card一店舗情報おわり -->
+          <!-- .uk-card一店舗情報はじまり -->
+          <div class="uk-card uk-margin-bottom">
+            <div class="uk-card-media-top uk-padding-left uk-padding-right">
+              <a href="shop.html">
+                <img
+                  src="image/no_image.png"
+                  alt="shop_name"
+                  class="shop_image uk-padding-left"
+                />
+              </a>
+              <img
+                src="image/heart-solid.png"
+                alt="like"
+                class="uk-overlay uk-position-top-right uk-padding-small"
+              />
+            </div>
+            <div class="uk-card-footer uk-padding-small">
+              店名：ほにゃらら<br />
+              人気商品：ホニャララ<br />
+              <div class="uk-child-width-1-2-@s uk-flex uk-flex-between">
+                <span class="uk-text-small uk-text-primary"
+                  >カテゴリ：honyarara</span
+                >
+                <span class="uk-text-small uk-text-right uk-text-primary"
+                  >徒歩1分</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- .uk-card一店舗情報おわり -->
+        </div>
+        <!-- お気に入り店舗おわり -->
+        <!---------------------
+        お気に入り商品はじまり
+        ------------------------>
+        <div id="like_food_container">
+          <!-- .uk-cardはじまり -->
+          <div class="food uk-card uk-box-shadow-small uk-border-rounded">
+            <!-- .uk-card-media-topはじまり画像部分 -->
+            <div class="uk-card-media-top">
+              <a href="food.html">
+                <img src="image/no_image.png" alt="" class="food_image" />
+              </a>
+              <!-- お気に入りハート -->
+              <img
+                src="image/heart-solid.png"
+                alt="like"
+                class="uk-overlay uk-position-top-right uk-padding-small like"
+              />
+            </div>
+            <!-- .uk-card-media-topおわり -->
+            <!-- .uk-card-bodyはじまり -->
+            <div class="uk-card-body food_detail">
+              <p>
+                <span class="uk-text-bold uk-text-emphasis">百光手羽唐</span
+                ><br />
+                <span>76円(税込) </span>
+              </p>
+            </div>
+            <!-- .uk-card-bodyおわり -->
+          </div>
+          <!-- .uk-cardおわり -->
+          <!-- .uk-cardはじまり -->
+          <div class="food uk-card uk-box-shadow-small uk-border-rounded">
+            <!-- .uk-card-media-topはじまり画像部分 -->
+            <div class="uk-card-media-top">
+              <a href="food.html">
+                <img src="image/no_image.png" alt="" class="food_image" />
+              </a>
+              <!-- お気に入りハート -->
+              <img
+                src="image/heart-solid.png"
+                alt="like"
+                class="uk-overlay uk-position-top-right uk-padding-small like"
+              />
+            </div>
+            <!-- .uk-card-media-topおわり -->
+            <!-- .uk-card-bodyはじまり -->
+            <div class="uk-card-body food_detail">
+              <p>
+                <span class="uk-text-bold uk-text-emphasis">百光手羽唐</span
+                ><br />
+                <span>76円(税込) </span>
+              </p>
+            </div>
+            <!-- .uk-card-bodyおわり -->
+          </div>
+          <!-- .uk-cardおわり -->
+          <!-- .uk-cardはじまり -->
+          <div class="food uk-card uk-box-shadow-small uk-border-rounded">
+            <!-- .uk-card-media-topはじまり画像部分 -->
+            <div class="uk-card-media-top">
+              <a href="food.html">
+                <img src="image/no_image.png" alt="" class="food_image" />
+              </a>
+              <!-- お気に入りハート -->
+              <img
+                src="image/heart-solid.png"
+                alt="like"
+                class="uk-overlay uk-position-top-right uk-padding-small like"
+              />
+            </div>
+            <!-- .uk-card-media-topおわり -->
+            <!-- .uk-card-bodyはじまり -->
+            <div class="uk-card-body food_detail">
+              <p>
+                <span class="uk-text-bold uk-text-emphasis">百光手羽唐</span
+                ><br />
+                <span>76円(税込) </span>
+              </p>
+            </div>
+            <!-- .uk-card-bodyおわり -->
+          </div>
+          <!-- .uk-cardおわり -->
+        </div>
+        <!-- お気に入り商品おわり -->
+      </div>
+      <!-- #main_containerおわり -->
+      <footer
+        class="uk-position-bottom uk-position-fixed uk-padding-small uk-padding-remove-horizontal"
+      >
+        <!-- uk-padding-remove-horizontal->左右のpadding削除 -->
+        <div class="uk-flex uk-flex-around">
+          <a href="main.html">
+            <img src="image/search.png" alt="search" />
+          </a>
+          <a href="order_histry.html">
+            <img src="image/histry.png" alt="histry" />
+          </a>
+          <a href="like.html">
+            <img src="image/heart-solid.png" alt="heart" />
+          </a>
+          <a href="cart.html">
+            <img src="image/cart.png" alt="cart" />
+          </a>
+          <a href="profile.html">
+            <img src="image/profile.png" alt="profile" />
+          </a>
+        </div>
+      </footer>
+    </div>
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.6/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.6/js/uikit-icons.min.js"></script>
+    <script>
+      // タブをタップしたら、他方のタブの内容をhiddenにして、自分ちの内容を表示するトグル
+      // const like_shop = document.getElementById('like_shop_container');
+      // const like_food = document.getElementById('like_food_container');
+      // const shop = document.getElementById('shop');
+      // const food = document.getElementById('food');
+    </script>
+  </body>
+</html>

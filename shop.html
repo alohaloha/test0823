@@ -28,7 +28,7 @@
         border-top: 0.5px solid #aaa;
       }
 
-      #foods_container {
+      #main_container {
         margin-bottom: 80px;
         box-sizing: border-box;
         display: grid;
@@ -68,152 +68,281 @@
         height: 100%;
         width: 100%;
       }
+      .like {
+        width: 70px;
+        height: 70px;
+      }
     </style>
     <title>shop</title>
   </head>
   <body>
+    <!-- ヘッダーはじまり -->
     <header class="uk-flex uk-box-shadow-small" uk-sticky="top:0">
-      <div class="uk-text-large uk-width-expanda">
-        ほにゃらら
-      </div>
+      <div class="uk-text-large uk-width-expanda">ほにゃらら</div>
       <div class="uk-text-small uk-width-small uk-text-right line_height">
         徒歩10分
       </div>
     </header>
+    <!-- ヘッダーおわり -->
+    <!--------------------------
+    店舗詳細情報はじまり
+    ---------------------------->
     <div id="shop_detail">
       <button type="button" class="uk-button uk-button-primary uk-width-1-1">
         <span class="uk-text-bold">店舗詳細情報</span>
       </button>
+      <!--------------------------
+      店舗詳細情報カーテン中身
+      ---------------------------->
       <div uk-dropdown="mode:click" class="dropdown">
         <h5 class="uk-margin-small uk-text-primary">推しpoint</h5>
         <div class="text uk-text-small">
           ほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃらら
         </div>
-        <h5 class="uk-margin-small uk-text-primary">定休日/営業時間</h5>
-        <div class="times">
-          日・祝日<br>
-          OPEN:10時<br>
-          CLOSE:20時
-        </div>
-        <h5 class="uk-margin-small uk-text-primary">所在地</h5>
+            <!--営業時間・電話番号・住所-->
+        <table class="uk-width-1-1">
+          <tr>
+            <td class="uk-text-primary uk-width-1-3">定休日</td>
+            <td>日・祝日</td>
+          </tr>
+          <tr>
+            <td class="uk-text-primary uk-width-1-3"">開店時間</td>
+            <td>10時</td>
+          </tr>
+          <tr>
+            <td class="uk-text-primary uk-width-1-3"">閉店時間</td>
+            <td>20時</td>
+          </tr>
+          <tr>
+            <td class="uk-text-primary uk-width-1-3"">電話番号</td>
+            <td>xxx-xxx-xxxx</td>
+          </tr>
+          <tr>
+            <td class="uk-text-primary uk-width-1-3"">住所</td>
+            <td>福岡県福岡市中央区大名なんちゃらかんちゃら</td>
+          </tr>
+        </table>
+        <!-- 地図 -->
         <div class="map">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7223.979640290737!2d130.38910372275697!3d33.586913873457746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354191aa0929fbdf%3A0xd5e535b27b5236c6!2z44K444O844K644Ki44Kr44OH44Of44O856aP5bKh77yP6LW35qWt5a6244O744Ko44Oz44K444OL44Ki6aSK5oiQ5a2m5qCh77yI44OX44Ot44Kw44Op44Of44Oz44Kw77yJ!5e0!3m2!1sja!2sjp!4v1598269098959!5m2!1sja!2sjp"
             width="400"
             height="300"
             frameborder="0"
-            style="border: 0;"
+            style="border: 0"
             allowfullscreen=""
             aria-hidden="false"
             tabindex="0"
           ></iframe>
         </div>
+        <!-- 地図おわり -->
       </div>
-      <div uk-dropdown="mode:click"></div>
+      <!-- カーテン中身おわり -->
     </div>
-    <div id="foods_container">
+    <!-- 店舗情報詳細おわり -->
+    <!---------------------
+    #main_containerはじまり
+    ----------------------->
+    <div id="main_container">
+      <!-- .uk-cardはじまり -->
       <div class="food uk-card uk-box-shadow-small uk-border-rounded">
-        <a href="food.html">
-          <img src="image/no_image.png" alt="" class="food_image" />
-        </a>
+        <!-- .uk-card-media-topはじまり画像部分 -->
+        <div class="uk-card-media-top">
+          <a href="food.html">
+            <img src="image/no_image.png" alt="" class="food_image" />
+          </a>
+          <!-- お気に入りハート -->
+          <img
+            src="image/heart-regular.png"
+            alt="like"
+            class="uk-overlay uk-position-top-right uk-padding-small like"
+          />
+        </div>
+        <!-- .uk-card-media-topおわり -->
+        <!-- .uk-card-bodyはじまり -->
         <div class="uk-card-body food_detail">
           <p>
             <span class="uk-text-bold uk-text-emphasis">百光手羽唐</span><br />
-            <span>76円(税込@1本) </span>
+            <span>76円(税込) </span>
           </p>
         </div>
+        <!-- .uk-card-bodyおわり -->
       </div>
+      <!-- .uk-cardおわり -->
+      <!-- .uk-cardはじまり -->
       <div class="food uk-card uk-box-shadow-small uk-border-rounded">
-        <a href="food.html">
-          <img src="image/no_image.png" alt="" class="food_image" />
-        </a>
+        <!-- .uk-card-media-topはじまり画像部分 -->
+        <div class="uk-card-media-top">
+          <a href="food.html">
+            <img src="image/no_image.png" alt="" class="food_image" />
+          </a>
+          <!-- お気に入りハート -->
+          <img
+            src="image/heart-solid.png"
+            alt="like"
+            class="uk-overlay uk-position-top-right uk-padding-small like"
+          />
+        </div>
+        <!-- .uk-card-media-topおわり -->
+        <!-- .uk-card-bodyはじまり -->
         <div class="uk-card-body food_detail">
           <p>
             <span class="uk-text-bold uk-text-emphasis">百光手羽唐</span><br />
-            <span>76円(税込@1本) </span>
+            <span>76円(税込) </span>
           </p>
         </div>
+        <!-- .uk-card-bodyおわり -->
       </div>
+      <!-- .uk-cardおわり -->
+      <!-- .uk-cardはじまり -->
       <div class="food uk-card uk-box-shadow-small uk-border-rounded">
-        <a href="food.html">
-          <img src="image/no_image.png" alt="" class="food_image" />
-        </a>
+        <!-- .uk-card-media-topはじまり画像部分 -->
+        <div class="uk-card-media-top">
+          <a href="food.html">
+            <img src="image/no_image.png" alt="" class="food_image" />
+          </a>
+          <!-- お気に入りハート -->
+          <img
+            src="image/heart-regular.png"
+            alt="like"
+            class="uk-overlay uk-position-top-right uk-padding-small like"
+          />
+        </div>
+        <!-- .uk-card-media-topおわり -->
+        <!-- .uk-card-bodyはじまり -->
         <div class="uk-card-body food_detail">
           <p>
             <span class="uk-text-bold uk-text-emphasis">百光手羽唐</span><br />
-            <span>76円(税込@1本) </span>
+            <span>76円(税込) </span>
           </p>
         </div>
+        <!-- .uk-card-bodyおわり -->
       </div>
+      <!-- .uk-cardおわり -->
+      <!-- .uk-cardはじまり -->
       <div class="food uk-card uk-box-shadow-small uk-border-rounded">
-        <a href="food.html">
-          <img src="image/no_image.png" alt="" class="food_image" />
-        </a>
+        <!-- .uk-card-media-topはじまり画像部分 -->
+        <div class="uk-card-media-top">
+          <a href="food.html">
+            <img src="image/no_image.png" alt="" class="food_image" />
+          </a>
+          <!-- お気に入りハート -->
+          <img
+            src="image/heart-regular.png"
+            alt="like"
+            class="uk-overlay uk-position-top-right uk-padding-small like"
+          />
+        </div>
+        <!-- .uk-card-media-topおわり -->
+        <!-- .uk-card-bodyはじまり -->
         <div class="uk-card-body food_detail">
           <p>
             <span class="uk-text-bold uk-text-emphasis">百光手羽唐</span><br />
-            <span>76円(税込@1本) </span>
+            <span>76円(税込) </span>
           </p>
         </div>
+        <!-- .uk-card-bodyおわり -->
       </div>
+      <!-- .uk-cardおわり -->
+      <!-- .uk-cardはじまり -->
       <div class="food uk-card uk-box-shadow-small uk-border-rounded">
-        <a href="food.html">
-          <img src="image/no_image.png" alt="" class="food_image" />
-        </a>
+        <!-- .uk-card-media-topはじまり画像部分 -->
+        <div class="uk-card-media-top">
+          <a href="food.html">
+            <img src="image/no_image.png" alt="" class="food_image" />
+          </a>
+          <!-- お気に入りハート -->
+          <img
+            src="image/heart-regular.png"
+            alt="like"
+            class="uk-overlay uk-position-top-right uk-padding-small like"
+          />
+        </div>
+        <!-- .uk-card-media-topおわり -->
+        <!-- .uk-card-bodyはじまり -->
         <div class="uk-card-body food_detail">
           <p>
             <span class="uk-text-bold uk-text-emphasis">百光手羽唐</span><br />
-            <span>76円(税込@1本) </span>
+            <span>76円(税込) </span>
           </p>
         </div>
+        <!-- .uk-card-bodyおわり -->
       </div>
+      <!-- .uk-cardおわり -->
+      <!-- .uk-cardはじまり -->
       <div class="food uk-card uk-box-shadow-small uk-border-rounded">
-        <a href="food.html">
-          <img src="image/no_image.png" alt="" class="food_image" />
-        </a>
+        <!-- .uk-card-media-topはじまり画像部分 -->
+        <div class="uk-card-media-top">
+          <a href="food.html">
+            <img src="image/no_image.png" alt="" class="food_image" />
+          </a>
+          <!-- お気に入りハート -->
+          <img
+            src="image/heart-solid.png"
+            alt="like"
+            class="uk-overlay uk-position-top-right uk-padding-small like"
+          />
+        </div>
+        <!-- .uk-card-media-topおわり -->
+        <!-- .uk-card-bodyはじまり -->
         <div class="uk-card-body food_detail">
           <p>
             <span class="uk-text-bold uk-text-emphasis">百光手羽唐</span><br />
-            <span>76円(税込@1本) </span>
+            <span>76円(税込) </span>
           </p>
         </div>
+        <!-- .uk-card-bodyおわり -->
       </div>
+      <!-- .uk-cardおわり -->
+      <!-- .uk-cardはじまり -->
       <div class="food uk-card uk-box-shadow-small uk-border-rounded">
-        <a href="food.html">
-          <img src="image/no_image.png" alt="" class="food_image" />
-        </a>
+        <!-- .uk-card-media-topはじまり画像部分 -->
+        <div class="uk-card-media-top">
+          <a href="food.html">
+            <img src="image/no_image.png" alt="" class="food_image" />
+          </a>
+          <!-- お気に入りハート -->
+          <img
+            src="image/heart-regular.png"
+            alt="like"
+            class="uk-overlay uk-position-top-right uk-padding-small like"
+          />
+        </div>
+        <!-- .uk-card-media-topおわり -->
+        <!-- .uk-card-bodyはじまり -->
         <div class="uk-card-body food_detail">
           <p>
             <span class="uk-text-bold uk-text-emphasis">百光手羽唐</span><br />
-            <span>76円(税込@1本) </span>
+            <span>76円(税込) </span>
           </p>
         </div>
+        <!-- .uk-card-bodyおわり -->
       </div>
-      <div class="food uk-card uk-box-shadow-small uk-border-rounded">
-        <a href="food.html">
-          <img src="image/no_image.png" alt="" class="food_image" />
-        </a>
-        <div class="uk-card-body food_detail">
-          <p>
-            <span class="uk-text-bold uk-text-emphasis">百光手羽唐</span><br />
-            <span>76円(税込@1本) </span>
-          </p>
-        </div>
-      </div>
+      <!-- .uk-cardおわり -->
     </div>
-
-    <footer
-      class="uk-position-bottom uk-position-fixed uk-padding-small uk-padding-remove-horizontal"
-    >
-      <!-- uk-padding-remove-horizontal->左右のpadding削除 -->
-      <div class="uk-flex uk-flex-around">
-        <a href="#"><img src="image/search.png" alt="search" /></a>
-        <a href="#"><img src="image/histry.png" alt="histry" /></a>
-        <a href="#"><img src="image/heart-regular.png" alt="heart" /></a>
-        <a href="#"><img src="image/cart.png" alt="cart" /></a>
-        <a href="#"><img src="image/profile.png" alt="profile" /></a>
-      </div>
-    </footer>
+    <!-- main_containerおわり -->
+      <footer
+        class="uk-position-bottom uk-position-fixed uk-padding-small uk-padding-remove-horizontal"
+      >
+        <!-- uk-padding-remove-horizontal->左右のpadding削除 -->
+        <div class="uk-flex uk-flex-around">
+          <a href="main.html">
+            <img src="image/search.png" alt="search" />
+          </a>
+          <a href="order_histry.html">
+            <img src="image/histry.png" alt="histry" />
+          </a>
+          <a href="like.html">
+            <img src="image/heart-regular.png" alt="heart" />
+          </a>
+          <a href="cart.html">
+            <img src="image/cart.png" alt="cart" />
+          </a>
+          <a href="profile.html">
+            <img src="image/profile.png" alt="profile" />
+          </a>
+        </div>
+      </footer>
     <!-- UIkit JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.6/js/uikit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.6/js/uikit-icons.min.js"></script>

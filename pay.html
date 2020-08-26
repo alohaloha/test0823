@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.6/css/uikit.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
+
+  <style>
+    button,
+    input {
+      border-radius: 5px;
+    }
+
+    .image_path {
+      display: block;
+      width: 120px;
+      height: 120px;
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 120px;
+      margin: 15px auto;
+    }
+
+    .image_src {
+      /* object-fit: cover;
+      overflow: hidden; */
+      font-size: 8rem;
+      color: #ccc;
+    }
+  </style>
+  <title>register</title>
+</head>
+
+<body>
+  <div class="uk-container uk-padding">
+    <header>
+      <a href="profile.html">
+        <p class="uk-text-right uk-text-large uk-link-reset uk-text-enphasis ">
+          <i class="fas fa-times"></i>
+        </p>
+      </a>
+    </header>
+    <div class="uk-container-center">
+      <h2 class="uk-text-center">クレジットカード情報</h2>
+      <form>
+        <fieldset class="uk-fieldset">
+          <input type="number"" required placeholder="カード番号" id=""
+            class="uk-input uk-margin-small-bottom uk-border-rounded" />
+          <input type="text" required placeholder="有効期限" id=""
+            class="uk-input uk-margin-small-bottom uk-border-rounded" />
+          <input type="" required placeholder="CVC" id=""
+            class="uk-input uk-margin-small-bottom uk-border-rounded" />
+          <input type="name" required placeholder="氏名" id="name"
+            class="uk-input uk-margin-small-bottom uk-border-rounded" />
+          <!---------
+          注意事項
+          ----------->
+            <div class="uk-card-body uk-padding-small uk-text-small uk-text-light">
+              <p>お客様のカード情報は、決済代行会社である○○株式会社によって保持されます。運営で情報を保管することはありません。</p>
+          </div>
+          <!--注意事項おわり-->
+          <button class="uk-button-secondary uk-button-large uk-width-1-1 uk-margin-small-bottom uk-border-rounded">
+            カード情報を登録する
+          </button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.6/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.6/js/uikit-icons.min.js"></script>
+  <script>
+
+  </script>
+</body>
+
+</html>
